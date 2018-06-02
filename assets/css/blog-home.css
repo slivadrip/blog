@@ -1,0 +1,105 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    padding-top: 54px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.titulo-noticia{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.bg-vermelho{
+   background: #a80000 !important;
+}
+.post-body{
+        margin-top: 26px;
+    text-align: justify;
+}
+
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+
+ .post-comments .image {
+    margin-right: 15px;
+}
+.post .title, .post .date, .post .comments, .post .views {
+    font-weight: 400;
+    color: #999;
+    text-transform: capitalize;
+}
+ .post-comments strong {
+    display: block;
+    color: #555;
+}
+
+ .post-comments img {
+    max-width: 40px;
+    min-width: 40px;
+    height: 40px;
+}
+
+.titulo-comentario {
+    line-height: 1.1em;
+    color: #222;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+}
+
+.botao-blog{
+    padding-right: 35px !important;
+    padding-left: 35px !important;
+    font-size: 20px !important;
+    background: #a80000 !important;
+    margin-bottom: 10px !important;
+    border: #a80000 !important;
+}
+
+.botao-blog:hover{
+    padding-right: 35px !important;
+    padding-left: 35px !important;
+    font-size: 20px !important;
+    background: red !important;
+    margin-bottom: 10px !important;
+    border: red !important;
+}
+.pagination-links {
+    text-align: center;
+        margin-bottom: 20px;
+    margin-top: 20px;
+}
+.pagination-links a{
+    position: relative;
+    display: inline;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #a80000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    
+}
+
+.pagination-links strong{
+    position: relative;
+    display: inline;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    
+}
