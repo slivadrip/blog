@@ -1,7 +1,7 @@
 # blog
 Blog CI
 
-![BlogCI](https://github.com/slivadrip/blog/assets/inicio.png)
+![BlogCI](https://raw.githubusercontent.com/slivadrip/blog/master/assets/inicio.png)
 
 Linguagens usadas: PHP e Javascript
 Banco de dados: Mysql
