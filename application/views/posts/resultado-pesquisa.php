@@ -8,30 +8,36 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            <h1 class="my-4"><?= $titulo ?>
+            <h1 class="my-4">
+                Resultados para "<?php echo$termo; ?>"
+
             </h1>
-            <?php foreach ($posts as $post) : ?>
+            <?php if (($posts)) {
+                ?>
+                <?php foreach ($posts as $post) : ?>
 
-                <!-- Blog Post -->
-                <div class="card mb-4">
-                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h2 class="card-title"><?= $post['titulo'] ?></h2>
-                        <p class="card-text"><?php echo word_limiter($post['conteudo'], 60); ?></p>
-                        <a href="<?php echo base_url('/posts/' . $post['slug']); ?>" class="btn btn-danger">Leia Mais &rarr;</a>
+                    <!-- Blog Post -->
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/images/posts/<?= $post->post_image ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title"><?= $post->titulo ?></h2>
+                            <p class="card-text"><?php echo word_limiter($post->conteudo, 60); ?></p>
+                            <a href="<?php echo base_url('/posts/' . $post->slug); ?>" class="btn btn-danger">Leia Mais &rarr;</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <?php echo date('d/m/Y H:i:s', strtotime($post->criado_em)); ?>
+                            <a href="#"><?= $post->nome; ?></a>
+                        </div>
                     </div>
-                    <div class="card-footer text-muted">
-                        <?php echo date('d/m/Y H:i:s', strtotime($post['criado_em'])); ?>
-                        <a href="#"><?php echo $post['nome']; ?></a>
-                    </div>
+                <?php endforeach; ?>
+
+                <div class="pagination-links">
+                    <?php echo $paginacao; ?>
                 </div>
-            <?php endforeach; ?>
 
-            <div class="pagination-links">
-                <?php echo $this->pagination->create_links(); ?>
-            </div>
-
-
+                <?php
+            }
+            ?>
 
         </div>
 
@@ -65,13 +71,16 @@
                         <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
 
-                                <?php foreach ($categorias as $categoria) : ?>
-
+                                <?php
+                                foreach ($categorias as $categoria2) {   
+                                    ?>
                                     <li>
-                                        <a href="#"><?php echo $post['nome']; ?></a>
+
+                                        <a href="#"><?php echo $categoria2['nome'] ?></a>
+
                                     </li>
 
-                                <?php endforeach; ?>
+                                <?php } ?>
 
 
                             </ul>
